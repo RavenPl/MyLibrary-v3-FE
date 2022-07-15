@@ -1,0 +1,15 @@
+.error {
+    background-color: #d00000;
+    height: 200px;
+    text-align: center;
+    border: 2px solid black;
+    margin: 200px auto 50px;
+    width: 80%;
+    color: black;
+    font-size: 30px;
+}
+
+p {
+    margin: 0;
+    line-height: 200px;
+}
