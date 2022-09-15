@@ -1,8 +1,10 @@
 import React, {useState} from "react";
 import {BookEntity} from "types";
 
+type specialEntityType = Omit<BookEntity, 'id'>
+
 interface SortConfigType {
-    key: keyof (BookEntity);
+    key: keyof (specialEntityType);
     direction: string;
 }
 
@@ -17,14 +19,12 @@ export const useSortTable = (data: BookEntity[]) => {
 
         let sortedBooks = [...data];
 
-        sortedBooks.sort((a, b) => {
+        sortedBooks.sort((a: BookEntity, b: BookEntity) => {
 
-
-                // @ts-ignore
                 if (a[sortConfig.key] < b[sortConfig.key]) {
                     return sortConfig.direction === 'ascending' ? -1 : 1;
                 }
-                // @ts-ignore
+
                 if (a[sortConfig.key] > b[sortConfig.key]) {
                     return sortConfig.direction === 'ascending' ? 1 : -1;
                 }
@@ -35,7 +35,7 @@ export const useSortTable = (data: BookEntity[]) => {
 
     }, [data, sortConfig]);
 
-    const requestSort = (key: keyof (BookEntity)) => {
+    const requestSort = (key: keyof (specialEntityType)) => {
 
         let direction = 'ascending';
         if (sortConfig !== null && sortConfig.key === key && sortConfig.direction === 'ascending') {
