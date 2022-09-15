@@ -12,7 +12,7 @@ export const AddBookView = () => {
     const [info, setInfo] = useState<null | string>(null);
 
     const [form, setForm] = useState<BookEntity>({
-
+        id: "",
         author: "",
         title: "",
         pages: 0,

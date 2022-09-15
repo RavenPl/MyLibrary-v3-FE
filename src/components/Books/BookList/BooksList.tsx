@@ -4,7 +4,6 @@ import {ErrorPage} from "../../../views/ErrorPageView/ErrorPage";
 import {Spinner} from "../../common/Spinner/Spinner";
 import {DataError} from "../../../types/data-error";
 import {SearchBookContext} from "../../../contexts/SearchBookContext";
-
 import {BookEntity} from 'types';
 
 import './BooksList.css'
@@ -13,11 +12,9 @@ export const BooksList = () => {
 
     const context = useContext(SearchBookContext);
     const {search} = context;
-
     const [booksList, setBooksList] = useState<BookEntity[]>([]);
     const [loading, setLoading] = useState<boolean>(false);
     const [error, setError] = useState<null | DataError>(null);
-
 
     const books = async () => {
 
@@ -63,8 +60,6 @@ export const BooksList = () => {
                 ? <h3 style={{textAlign: "center"}}>You actually have {booksList.length} books in your database.</h3>
                 : <h3 style={{textAlign: "center"}}>Your library is empty!</h3>
         }
-
         {booksList && <BooksTable data={booksList}/>}
     </>
-
 }

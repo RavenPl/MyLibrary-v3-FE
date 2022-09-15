@@ -8,11 +8,10 @@ import {ErrorPage} from "../ErrorPageView/ErrorPage";
 
 import './EditBookView.css'
 
-
 export const EditBookView = () => {
 
-
     const [form, setForm] = useState<BookEntity>({
+        id: "",
         author: "",
         title: "",
         pages: 0,
@@ -28,9 +27,10 @@ export const EditBookView = () => {
     useEffect(() => {
 
         (async () => {
-            setLoading(true)
-            try {
 
+            setLoading(true)
+
+            try {
                 const resp = await fetch(`http://localhost:3001/books/${id}`);
                 const data = await resp.json();
 
@@ -44,18 +44,18 @@ export const EditBookView = () => {
                 }
 
                 const {title, status, pages, author} = (data.book) as BookEntity
+
                 setForm(form => ({
                     ...form,
                     title, status, pages, author,
                 }))
+
             } finally {
                 setLoading(false)
             }
-
         })();
 
     }, [])
-
 
     const sendForm = async (e: FormEvent) => {
 
@@ -100,7 +100,6 @@ export const EditBookView = () => {
     if (info !== null) {
         return (
             <div className="container">
-
                 <h2>{info}</h2>
                 <Button
                     to="/books"
@@ -111,6 +110,7 @@ export const EditBookView = () => {
             </div>
         )
     }
+
     const updateForm = (key: string, value: any) => {
         setForm(form => ({
             ...form,
@@ -125,7 +125,6 @@ export const EditBookView = () => {
 
                 <form onSubmit={sendForm}>
                     <div className="row">
-
                         <div className="three columns">
                             <label>Title</label>
                             <input
@@ -166,14 +165,12 @@ export const EditBookView = () => {
                                 <option value="not read">Not read</option>
                             </select>
                         </div>
-
                     </div>
                     <Button
                         text="save"
                         className="button four columns offset-by-four"
                         color="lightgreen"
                     />
-
                 </form>
                 <Button
                     to="/books"
@@ -181,7 +178,6 @@ export const EditBookView = () => {
                     text="Back to the main page"
                     className="button four columns offset-by-four"/>
             </div>
-
         </>
     )
 }
