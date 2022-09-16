@@ -54,13 +54,18 @@
 
 ## :dart: Features
 
-- adding a new book to the list :heavy_check_mark:
-  <br>
-  <img src="./src/utils/images/addingBook.jpg" />
-- editing existing ones :heavy_check_mark:
+- general view <br>
+  <img src="./src/utils/images/mainView.jpg"/>
+- adding a new book to the list :heavy_check_mark: <br>
+  <img src="./src/utils/images/addingBook.jpg"/>
+- editing existing ones :heavy_check_mark: <br>
+  <img src="./src/utils/images/editBook.jpg"/>
 - deleting specific one or all at once :heavy_check_mark:
-- you can search your book by title or by author name :heavy_check_mark:
-- you can list your positions by title, author, page number or by status :heavy_check_mark:
+- you can search your book by title or by author name :heavy_check_mark: <br>
+  <img src="./src/utils/images/searchByAuthor.jpg"/> <hr>
+  <img src="./src/utils/images/searchByTitle.jpg"/>
+- you can list your positions by title, author, page number or by status :heavy_check_mark: <br>
+  <img src="./src/utils/images/orderByAuthor.jpg"/>
 
 # :toolbox: Getting Started
 
