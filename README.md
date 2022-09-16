@@ -8,7 +8,6 @@
 - [About the Project](#star2-about-the-project)
   * [Tech Stack](#space_invader-tech-stack)
   * [Features](#dart-features)
-  * [Environment Variables](#key-environment-variables)
 - [Getting Started](#toolbox-getting-started)
   * [Prerequisites](#bangbang-prerequisites)
   * [Run Locally](#running-run-locally)
@@ -17,7 +16,7 @@
 
 # :star2: About the Project
 
-* a small variaton of to do list
+* a small variation of to do list
 * it allows you to add your favourite books
 
 ## :space_invader: Tech Stack
@@ -56,7 +55,8 @@
 ## :dart: Features
 
 - adding a new book to the list :heavy_check_mark:
-  <img src="./utils/images/addingBook.jpg" />
+  <br>
+  <img src="./src/utils/images/addingBook.jpg" />
 - editing existing ones :heavy_check_mark:
 - deleting specific one or all at once :heavy_check_mark:
 - you can search your book by title or by author name :heavy_check_mark:
