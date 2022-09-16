@@ -32,7 +32,7 @@ export const EditBookView = () => {
             setLoading(true)
 
             try {
-                const resp = await fetch(`${apiUrl}${id}`);
+                const resp = await fetch(`${apiUrl}/${id}`);
                 const data = await resp.json();
 
                 if ([400, 404, 500].includes(resp.status)) {
