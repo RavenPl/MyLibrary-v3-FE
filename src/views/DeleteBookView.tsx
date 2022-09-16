@@ -5,6 +5,7 @@ import {useParams} from "react-router-dom";
 import {BookEntity} from 'types';
 import {Spinner} from "../components/common/Spinner/Spinner";
 import {ErrorPage} from "./ErrorPageView/ErrorPage";
+import {apiUrl} from "../utils/api";
 
 export const DeleteBookView = () => {
 
@@ -48,7 +49,7 @@ export const DeleteBookView = () => {
         try {
             setLoading(true);
 
-            const resp = await fetch(`http://localhost:3001/books/${id}`, {
+            const resp = await fetch(`${apiUrl}${id}`, {
                 method: "DELETE",
             })
             const data = await resp.json();

@@ -7,6 +7,7 @@ import {SearchBookContext} from "../../../contexts/SearchBookContext";
 import {BookEntity} from 'types';
 
 import './BooksList.css'
+import {apiUrl} from "../../../utils/api";
 
 export const BooksList = () => {
 
@@ -21,7 +22,7 @@ export const BooksList = () => {
         try {
 
             setLoading(true);
-            const resp = await fetch(`http://localhost:3001/books/?search=${search.value}&category=${search.category}`);
+            const resp = await fetch(`${apiUrl}?search=${search.value}&category=${search.category}`);
             const data = await resp.json();
 
             if ([400, 500].includes(resp.status)) {

@@ -3,6 +3,7 @@ import {Button} from "../components/common/Button";
 import {Spinner} from "../components/common/Spinner/Spinner";
 import {DataError} from "../types/data-error";
 import {ErrorPage} from "./ErrorPageView/ErrorPage";
+import {apiUrl} from "../utils/api";
 
 
 export const DeleteAllBooksView = () => {
@@ -15,7 +16,7 @@ export const DeleteAllBooksView = () => {
 
         try {
             setLoading(true);
-            const resp = await fetch("http://localhost:3001/books/delete/all", {
+            const resp = await fetch(`${apiUrl}/delete/all`, {
                 method: "DELETE",
             })
             const data = await resp.json();
@@ -29,7 +30,6 @@ export const DeleteAllBooksView = () => {
                 setError(error);
                 return
             }
-
             setInfo("All your books have been deleted!")
         } finally {
             setLoading(false);
@@ -53,7 +53,6 @@ export const DeleteAllBooksView = () => {
                 text="Back to the main page"
                 className="button four columns offset-by-four"
             />
-
         </div>
     }
 

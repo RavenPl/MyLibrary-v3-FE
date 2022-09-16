@@ -7,6 +7,7 @@ import {DataError} from "../../types/data-error";
 import {ErrorPage} from "../ErrorPageView/ErrorPage";
 
 import './EditBookView.css'
+import {apiUrl} from "../../utils/api";
 
 export const EditBookView = () => {
 
@@ -31,7 +32,7 @@ export const EditBookView = () => {
             setLoading(true)
 
             try {
-                const resp = await fetch(`http://localhost:3001/books/${id}`);
+                const resp = await fetch(`${apiUrl}${id}`);
                 const data = await resp.json();
 
                 if ([400, 404, 500].includes(resp.status)) {
@@ -61,7 +62,7 @@ export const EditBookView = () => {
 
         e.preventDefault();
         try {
-            const resp = await fetch(`http://localhost:3001/books/${id}`, {
+            const resp = await fetch(`${apiUrl}${id}`, {
                 method: "PATCH",
                 headers: {
                     'content-type': 'application/json'
