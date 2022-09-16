@@ -56,6 +56,7 @@
 ## :dart: Features
 
 - adding a new book to the list :heavy_check_mark:
+  <img src="./utils/images/addingBook.jpg" />
 - editing existing ones :heavy_check_mark:
 - deleting specific one or all at once :heavy_check_mark:
 - you can search your book by title or by author name :heavy_check_mark:
