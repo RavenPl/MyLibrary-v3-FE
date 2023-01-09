@@ -1,16 +1,14 @@
 import {createContext} from 'react';
 
-export interface SetSearch {
-    value: string;
-    category: string
-}
-
-export interface SearchBookContextType {
+interface SearchBookContextType {
     search: {
         value: string,
         category: string,
     };
-    setSearch: ({}: SetSearch) => void
+    setSearch: ({}: {
+        value: string;
+        category: string
+    }) => void
 }
 
 export const SearchBookContext = createContext<SearchBookContextType>({
