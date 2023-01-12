@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from 'react';
-import {Button} from "../components/common/Button";
-import {DataError} from "../types/data-error";
 import {useParams} from "react-router-dom";
+import {DataError} from "../types/data-error";
 import {BookEntity} from 'types';
+import {Button} from "../components/common/Button";
 import {Spinner} from "../components/common/Spinner/Spinner";
 import {ErrorPage} from "./ErrorPageView/ErrorPage";
 import {apiUrl} from "../utils/api";
@@ -21,7 +21,7 @@ export const DeleteBookView = () => {
 
             (async () => {
                 setLoading(true)
-                const resp = await fetch(`http://localhost:3001/books/${id}`);
+                const resp = await fetch(`${apiUrl}/${id}`);
                 const data = await resp.json();
 
                 if ([400, 500, 404].includes(resp.status)) {
@@ -43,13 +43,11 @@ export const DeleteBookView = () => {
 
     }, [])
 
-
     const deleteBook = async () => {
 
         try {
             setLoading(true);
-
-            const resp = await fetch(`${apiUrl}${id}`, {
+            const resp = await fetch(`${apiUrl}/${id}`, {
                 method: "DELETE",
             })
             const data = await resp.json();
@@ -85,7 +83,6 @@ export const DeleteBookView = () => {
                 text="Back to the main page"
                 className="button four columns offset-by-four"
             />
-
         </div>
     }
 
@@ -110,7 +107,6 @@ export const DeleteBookView = () => {
                     color="#7cc6fe"
                 />
             </div>}
-
         </>
     )
 }

@@ -5,9 +5,9 @@ import {Button} from "../../components/common/Button";
 import {Spinner} from "../../components/common/Spinner/Spinner";
 import {DataError} from "../../types/data-error";
 import {ErrorPage} from "../ErrorPageView/ErrorPage";
+import {apiUrl} from "../../utils/api";
 
 import './EditBookView.css'
-import {apiUrl} from "../../utils/api";
 
 export const EditBookView = () => {
 
@@ -62,7 +62,7 @@ export const EditBookView = () => {
 
         e.preventDefault();
         try {
-            const resp = await fetch(`${apiUrl}${id}`, {
+            const resp = await fetch(`${apiUrl}/${id}`, {
                 method: "PATCH",
                 headers: {
                     'content-type': 'application/json'

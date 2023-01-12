@@ -5,9 +5,10 @@ import {Spinner} from "../../common/Spinner/Spinner";
 import {DataError} from "../../../types/data-error";
 import {SearchBookContext} from "../../../contexts/SearchBookContext";
 import {BookEntity} from 'types';
+import {apiUrl} from "../../../utils/api";
 
 import './BooksList.css'
-import {apiUrl} from "../../../utils/api";
+
 
 export const BooksList = () => {
 
@@ -20,7 +21,6 @@ export const BooksList = () => {
     const books = async () => {
 
         try {
-
             setLoading(true);
             const resp = await fetch(`${apiUrl}?search=${search.value}&category=${search.category}`);
             const data = await resp.json();
@@ -34,7 +34,6 @@ export const BooksList = () => {
                 return
             }
             setBooksList(data.booksList);
-
         } finally {
 
             setLoading(false)
