@@ -1,7 +1,8 @@
 import React, {FormEvent, useContext, useState} from 'react';
-import './Header.css';
 import {Button} from "../common/Button";
 import {SearchBookContext} from "../../contexts/SearchBookContext";
+
+import './Header.css';
 
 export const Header = () => {
 
@@ -21,15 +22,14 @@ export const Header = () => {
     };
 
     const setSearchValue = (e: FormEvent) => {
-        e.preventDefault()
 
+        e.preventDefault()
         setSearch(data)
     }
 
     return (
         <>
             <header>
-
                 <div className='row'>
                     <Button to="/books/add" color="#d0f4de" text="add a book" className='button three columns'/>
                     <Button to="/books/delete/all"
@@ -39,7 +39,6 @@ export const Header = () => {
                     />
                     <form
                         onSubmit={setSearchValue}>
-
                         <input
                             className="three columns button"
                             name="value"
@@ -67,7 +66,6 @@ export const Header = () => {
                             <option value="title">TITLE</option>
                             <option value="author">AUTHOR</option>
                         </select>
-
                         <Button
                             className="offset-by-five seven columns button"
                             text="Search"
@@ -75,7 +73,6 @@ export const Header = () => {
                         />
                     </form>
                 </div>
-
             </header>
         </>
     )

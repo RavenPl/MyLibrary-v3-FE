@@ -4,6 +4,7 @@ import {Spinner} from "../components/common/Spinner/Spinner";
 import {DataError} from "../types/data-error";
 import {ErrorPage} from "./ErrorPageView/ErrorPage";
 import {Button} from "../components/common/Button";
+import {apiUrl} from "../utils/api";
 
 export const AddBookView = () => {
 
@@ -12,7 +13,7 @@ export const AddBookView = () => {
     const [info, setInfo] = useState<null | string>(null);
 
     const [form, setForm] = useState<BookEntity>({
-
+        id: "",
         author: "",
         title: "",
         pages: 0,
@@ -33,7 +34,7 @@ export const AddBookView = () => {
         try {
             setLoading(true);
 
-            const resp = await fetch("http://localhost:3001/books", {
+            const resp = await fetch(`${apiUrl}`, {
                 method: "POST",
                 headers: {
                     "Content-type": "application/json"

@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-
 import {BooksView} from "./views/BooksView";
 import {Route, Routes} from "react-router-dom";
 import {EditBookView} from "./views/EditBookView/EditBookView";
@@ -28,8 +27,6 @@ export function App() {
                 <Route path="/books/delete/all" element={<DeleteAllBooksView/>}/>
                 <Route path="/books/delete/:id" element={<DeleteBookView/>}/>
                 <Route path="*" element={<NotFoundView/>}/>
-
-
             </Routes>
         </SearchBookContext.Provider>
     )

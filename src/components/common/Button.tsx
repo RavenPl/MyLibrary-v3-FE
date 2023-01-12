@@ -24,7 +24,6 @@ export const Button = (props: Props) => {
 
             </Link>
             : <button
-
                 name={props.name}
                 className={props.className}
                 style={{backgroundColor: props.color}}

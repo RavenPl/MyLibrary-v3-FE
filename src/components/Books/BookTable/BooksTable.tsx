@@ -11,7 +11,6 @@ interface Props {
 
 export const BooksTable = ({data}: Props) => {
 
-
     const {items, requestSort, sortConfig} = useSortTable(data);
 
     const getClassNamesFor = (name: string) => {
@@ -32,7 +31,6 @@ export const BooksTable = ({data}: Props) => {
                             name="title"
                             text="Title"
                             onClick={(e) => requestSort(e.target.name)}/>
-
                     </th>
                     <th>
                         <Button

@@ -1,46 +1,120 @@
-# Getting Started with Create React App
+<div align="center">  
+  <h1>My library [FE] - v3</h1>  
+</div>  
+<!-- Table of Contents -->  
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# :notebook_with_decorative_cover: Table of Contents
 
-## Available Scripts
+- [About the Project](#star2-about-the-project)
+  * [Tech Stack](#space_invader-tech-stack)
+  * [Features](#dart-features)
+- [Getting Started](#toolbox-getting-started)
+  * [Prerequisites](#bangbang-prerequisites)
+  * [Run Locally](#running-run-locally)
+- [Usage](#eyes-usage)
+- [Project Status](#hammer_and_wrench-project-status)
 
-In the project directory, you can run:
+# :star2: About the Project
 
-### `npm start`
+* a small variation of to do list
+* it allows you to add your favourite books
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## :space_invader: Tech Stack
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<details>  
+  <summary>Client</summary>  
+  <ul>  
+    <li>React</li>  
+    <li>Typescript</li>
+    <li>Skeleton</li>
+  </ul>  
+</details>  
+<details>  
+  <summary>Server</summary>  
+  <ul>  
+    <li>Express</li>  
+    <li>Typescript</li>
+  </ul>  
+</details>  
+<details>  
+<summary>Security</summary>  
+<ul>  
+<li>Helmet</li> 
+<li>Express Rate Limit</li>
+</ul>  
+</details>  
+<details>  
+<summary>Database</summary>  
+  <ul>  
+    <li>MySQL</li>  
+  </ul>  
+</details>  
 
-### `npm test`
+<!-- Features -->  
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## :dart: Features
 
-### `npm run build`
+- general view <br>
+  <img src="./src/utils/images/mainView.jpg"/>
+- adding a new book to the list :heavy_check_mark: <br>
+  <img src="./src/utils/images/addingBook.jpg"/>
+- editing existing ones :heavy_check_mark: <br>
+  <img src="./src/utils/images/editBook.jpg"/>
+- deleting specific one or all at once :heavy_check_mark:
+- you can search your book by title or by author name :heavy_check_mark: <br>
+  <img src="./src/utils/images/searchByAuthor.jpg"/> <hr>
+  <img src="./src/utils/images/searchByTitle.jpg"/>
+- you can list your positions by title, author, page number or by status :heavy_check_mark: <br>
+  <img src="./src/utils/images/orderByAuthor.jpg"/>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# :toolbox: Getting Started
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<!-- Prerequisites -->  
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### :bangbang: Prerequisites
 
-### `npm run eject`
+This project uses npm as package manager
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```bash  
+ npm install --global npm  
+```  
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<!-- Run Locally -->  
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## :running: Run Locally
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Clone the project
 
-## Learn More
+```bash  
+ git clone https://github.com/RavenPl/MyLibrary-v3-FE.git
+```  
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Go to the project directory
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash  
+ cd my-library-FE  
+```  
+
+Install dependencies
+
+```bash  
+ npm install  
+```  
+
+Start the server
+
+```bash  
+ npm start  
+```  
+
+<!-- Usage -->  
+
+# :eyes: Usage
+
+1. Make sure backend is listening and database is implemented correctly, also please check cors settings in express
+   repository!
+2. Link to backend repository [_link_](https://github.com/RavenPl/MyLibrary-v3-BE).
+
+# :hammer_and_wrench: Project Status
+
+The project is closed. Next version will be with Nest framework.
